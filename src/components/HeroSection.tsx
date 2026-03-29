@@ -3,28 +3,32 @@ import { Star } from "lucide-react";
 import GoogleIcon from "./GoogleIcon";
 
 const HeroSection = () => (
-  <section id="accueil" className="relative h-screen min-h-[500px] flex items-center overflow-hidden">
-    <img
-      src={heroImg}
-      alt="Salon Douce Beauté"
-      className="absolute inset-0 w-full h-full object-cover"
-      width={1920}
-      height={1080}
-    />
-    <div className="hero-overlay absolute inset-0" />
-    <div className="relative z-10 container mx-auto px-4 sm:px-6">
-      <div className="max-w-xl">
-        <p className="font-body text-xs uppercase tracking-[0.3em] text-primary-foreground/80 mb-4 animate-fade-in-up">
+  <section id="accueil" className="min-h-screen flex flex-col lg:flex-row">
+    {/* Image — en haut mobile, à droite desktop */}
+    <div className="h-72 sm:h-96 lg:h-auto lg:w-5/12 order-first lg:order-last shrink-0">
+      <img
+        src={heroImg}
+        alt="Salon Douce Beauté"
+        className="w-full h-full object-cover"
+        width={1920}
+        height={1080}
+      />
+    </div>
+
+    {/* Contenu — en bas mobile, à gauche desktop */}
+    <div className="flex-1 flex items-center bg-rose-light px-8 sm:px-12 lg:px-16 xl:px-24 py-14 lg:py-0">
+      <div className="max-w-lg w-full">
+        <p className="font-body text-xs uppercase tracking-[0.3em] text-gold mb-5 animate-fade-in-up">
           Salon de beauté • Paris
         </p>
         <h1
-          className="font-display text-5xl sm:text-6xl lg:text-7xl font-semibold text-primary-foreground leading-tight mb-6 animate-fade-in-up"
+          className="font-display text-5xl sm:text-6xl lg:text-7xl font-light text-foreground leading-tight mb-6 animate-fade-in-up"
           style={{ animationDelay: "0.2s" }}
         >
           La beauté dans toute sa <em className="italic text-gold">douceur</em>
         </h1>
         <p
-          className="font-body text-base md:text-lg font-light text-primary-foreground/85 mb-8 md:mb-10 animate-fade-in-up"
+          className="font-body text-base md:text-lg font-light text-foreground/60 mb-10 leading-relaxed animate-fade-in-up"
           style={{ animationDelay: "0.4s" }}
         >
           Un cocon de sérénité où chaque soin devient un rituel de bien-être.
@@ -34,16 +38,16 @@ const HeroSection = () => (
             href="https://www.planity.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block gold-gradient text-accent-foreground font-body text-sm uppercase tracking-widest px-7 sm:px-10 py-3.5 sm:py-4 hover:opacity-90 transition-opacity"
+            className="inline-block gold-gradient text-white font-body text-sm uppercase tracking-widest px-9 py-4 rounded-full hover:opacity-90 transition-opacity shadow-md"
           >
             Réserver en ligne
           </a>
         </div>
         <div
-          className="flex items-center gap-2 mt-5 animate-fade-in-up"
+          className="flex items-center gap-2 mt-7 animate-fade-in-up"
           style={{ animationDelay: "0.8s" }}
         >
-          <span className="flex items-center justify-center w-6 h-6 bg-white rounded-full shadow-md shrink-0">
+          <span className="flex items-center justify-center w-6 h-6 bg-white rounded-full shadow-sm shrink-0">
             <GoogleIcon size={13} />
           </span>
           <div className="flex gap-0.5">
@@ -51,7 +55,7 @@ const HeroSection = () => (
               <Star key={i} size={13} className="fill-gold text-gold" />
             ))}
           </div>
-          <span className="font-body text-sm text-primary-foreground/75">4,9 / 5</span>
+          <span className="font-body text-sm text-foreground/50">4,9 / 5</span>
         </div>
       </div>
     </div>

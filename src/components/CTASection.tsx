@@ -18,7 +18,7 @@ const CTASection = () => (
           href="https://www.planity.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-white text-gold font-body text-sm uppercase tracking-widest px-8 sm:px-10 py-3.5 sm:py-4 hover:bg-white/90 transition-all duration-300 shadow-lg"
+          className="inline-block bg-white text-gold font-body text-sm uppercase tracking-widest px-8 sm:px-10 py-3.5 sm:py-4 rounded-full hover:bg-white/90 transition-all duration-300 shadow-lg"
         >
           Réserver maintenant
         </a>

@@ -115,24 +115,14 @@
   }
 }
 
-/* Animations smooth */
-@keyframes fade-up {
-  from { opacity: 0; transform: translateY(24px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes scale-in {
-  from { opacity: 0; transform: scale(0.97); }
-  to { opacity: 1; transform: scale(1); }
+/* Animations smooth blur-fade */
+@keyframes fade-up-blur {
+  from { opacity: 0; transform: translateY(20px); filter: blur(5px); }
+  to   { opacity: 1; transform: translateY(0);    filter: blur(0px); }
 }
 
 .animate-fade-in-up {
-  animation: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: fade-up-blur 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   opacity: 0;
 }
 

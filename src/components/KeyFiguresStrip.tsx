@@ -6,13 +6,13 @@ const figures = [
 ];
 
 const KeyFiguresStrip = () => (
-  <div className="bg-foreground py-10">
+  <div className="bg-rose-light py-10 border-y border-border">
     <div className="container mx-auto px-6">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
         {figures.map((f) => (
           <div key={f.label} className="text-center">
-            <p className="font-display text-3xl md:text-4xl font-semibold text-gold">{f.value}</p>
-            <p className="font-body text-sm uppercase tracking-widest text-primary-foreground/60 mt-2">{f.label}</p>
+            <p className="font-display text-3xl md:text-4xl font-light text-gold">{f.value}</p>
+            <p className="font-body text-sm uppercase tracking-widest text-muted-foreground mt-2">{f.label}</p>
           </div>
         ))}
       </div>

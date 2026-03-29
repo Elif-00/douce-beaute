@@ -75,7 +75,7 @@ const Navbar = () => {
             href="https://www.planity.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="gold-gradient text-accent-foreground font-body text-xs uppercase tracking-widest px-6 py-2.5 hover:opacity-90 transition-opacity"
+            className="gold-gradient text-white font-body text-xs uppercase tracking-widest px-6 py-2.5 rounded-full hover:opacity-90 transition-opacity"
           >
             Réserver
           </a>
@@ -120,7 +120,7 @@ const Navbar = () => {
                 href="https://www.planity.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="gold-gradient text-accent-foreground font-body text-xs uppercase tracking-widest px-8 py-3 block"
+                className="gold-gradient text-white font-body text-xs uppercase tracking-widest px-8 py-3 rounded-full block"
               >
                 Réserver en ligne
               </a>

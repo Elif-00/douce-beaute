@@ -32,8 +32,9 @@ const Reveal = ({ children, delay = 0, className = "" }: RevealProps) => {
       className={className}
       style={{
         opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0)" : "translateY(28px)",
-        transition: `opacity 0.65s ease ${delay}s, transform 0.65s ease ${delay}s`,
+        transform: visible ? "translateY(0)" : "translateY(22px)",
+        filter: visible ? "blur(0px)" : "blur(5px)",
+        transition: `opacity 0.8s cubic-bezier(0.22,1,0.36,1) ${delay}s, transform 0.8s cubic-bezier(0.22,1,0.36,1) ${delay}s, filter 0.8s cubic-bezier(0.22,1,0.36,1) ${delay}s`,
       }}
     >
       {children}

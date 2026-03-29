@@ -53,7 +53,7 @@ const ServicesSection = () => (
                 />
               </div>
               <div className="p-5 sm:p-6 bg-cream">
-                <h3 className="font-display text-2xl sm:text-2xl md:text-3xl font-semibold text-foreground mb-2">{s.name}</h3>
+                <h3 className="font-display text-2xl sm:text-2xl md:text-3xl font-light text-foreground mb-2">{s.name}</h3>
                 <p className="font-body text-sm sm:text-base text-muted-foreground leading-relaxed">{s.desc}</p>
               </div>
             </div>
@@ -65,7 +65,7 @@ const ServicesSection = () => (
           href="https://www.planity.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block gold-gradient text-accent-foreground font-body text-sm uppercase tracking-widest px-10 py-4 hover:opacity-90 transition-opacity"
+          className="inline-block gold-gradient text-white font-body text-sm uppercase tracking-widest px-10 py-4 rounded-full hover:opacity-90 transition-opacity"
         >
           Réserver en ligne
         </a>
