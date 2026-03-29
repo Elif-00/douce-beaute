@@ -46,24 +46,24 @@ const PricingSection = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <Reveal className="text-center mb-12 md:mb-16">
           <p className="font-body text-xs font-medium uppercase tracking-[0.3em] text-gold mb-3">Nos formules</p>
-          <h2 className="font-display text-5xl md:text-6xl font-semibold text-foreground">Tarifs</h2>
+          <h2 className="font-display text-5xl md:text-6xl font-light text-foreground">Tarifs</h2>
         </Reveal>
-        <div className="max-w-2xl mx-auto space-y-2">
+        <div className="max-w-2xl mx-auto space-y-0">
           {categories.map((cat, i) => (
             <Reveal key={cat.name} delay={i * 0.07}>
-              <div className="border border-border bg-background">
+              <div className="border-b border-border bg-transparent">
                 <button
-                  className="w-full flex items-center justify-between px-5 sm:px-7 py-4 sm:py-5 text-left"
+                  className="w-full flex items-center justify-between px-6 sm:px-8 py-5 sm:py-6 text-left"
                   onClick={() => setOpen(open === i ? null : i)}
                 >
-                  <span className="font-display text-lg sm:text-xl font-semibold text-foreground">{cat.name}</span>
+                  <span className="font-display text-lg sm:text-xl font-light text-foreground">{cat.name}</span>
                   {open === i
                     ? <Minus size={18} className="text-gold shrink-0" />
                     : <Plus size={18} className="text-gold shrink-0" />
                   }
                 </button>
                 {open === i && (
-                  <div className="px-5 sm:px-7 pb-5">
+                  <div className="px-6 sm:px-8 pb-5">
                     <div className="space-y-3">
                       {cat.items.map((item) => (
                         <div key={item.service} className="flex justify-between items-center border-b border-border pb-3">

@@ -32,27 +32,27 @@ const FAQSection = () => {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-12 md:py-24 lg:py-32 bg-section-alt">
+    <section id="faq" className="py-12 md:py-24 lg:py-32 bg-background">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 md:mb-16">
           <p className="font-body text-xs font-medium uppercase tracking-[0.3em] text-gold mb-3">Vos questions</p>
-          <h2 className="font-display text-5xl md:text-6xl font-semibold text-foreground">FAQ</h2>
+          <h2 className="font-display text-5xl md:text-6xl font-light text-foreground">FAQ</h2>
         </div>
-        <div className="max-w-3xl mx-auto space-y-3">
+        <div className="max-w-3xl mx-auto space-y-0">
           {faqs.map((faq, i) => (
-            <div key={i} className="border border-border bg-background">
+            <div key={i} className="border-b border-border bg-transparent">
               <button
-                className="w-full flex items-center justify-between px-4 sm:px-6 py-4 sm:py-5 text-left min-h-[52px]"
+                className="w-full flex items-center justify-between px-0 sm:px-0 py-5 sm:py-6 text-left min-h-[52px]"
                 onClick={() => setOpen(open === i ? null : i)}
               >
-                <span className="font-display text-base sm:text-lg font-semibold text-foreground pr-4">{faq.q}</span>
+                <span className="font-display text-lg sm:text-xl font-light text-foreground pr-4">{faq.q}</span>
                 {open === i
                   ? <Minus size={18} className="text-gold shrink-0" />
                   : <Plus size={18} className="text-gold shrink-0" />
                 }
               </button>
               {open === i && (
-                <div className="px-4 sm:px-6 pb-4 sm:pb-5">
+                <div className="pb-5 sm:pb-6">
                   <p className="font-body text-base text-muted-foreground leading-relaxed">{faq.a}</p>
                 </div>
               )}

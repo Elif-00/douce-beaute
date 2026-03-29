@@ -26,16 +26,16 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-transparent"
+        scrolled ? "bg-white/95 backdrop-blur-xl shadow-sm" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
-        <a href="#accueil" className="font-display text-2xl font-semibold tracking-wide text-foreground shrink-0">
+        <a href="#accueil" className="font-display text-xl font-light tracking-[0.15em] text-foreground shrink-0">
           Douce <span className="text-gold">Beauté</span>
         </a>
 
         {/* Desktop nav */}
-        <ul className="hidden lg:flex items-center gap-7">
+        <ul className="hidden lg:flex items-center gap-8">
           {links.map((l) => (
             <li key={l.href}>
               <a
@@ -75,7 +75,7 @@ const Navbar = () => {
             href="https://www.planity.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="gold-gradient text-white font-body text-xs uppercase tracking-widest px-6 py-2.5 rounded-full hover:opacity-90 transition-opacity"
+            className="gold-gradient text-white font-body text-xs uppercase tracking-widest px-5 py-2 rounded-full hover:opacity-90 transition-opacity"
           >
             Réserver
           </a>

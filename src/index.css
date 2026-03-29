@@ -6,14 +6,14 @@
 
 @layer base {
   :root {
-    --background: 0 0% 99%;
-    --foreground: 330 12% 22%;
+    --background: 0 0% 100%;
+    --foreground: 240 4% 12%;
 
     --card: 350 40% 97%;
-    --card-foreground: 330 12% 22%;
+    --card-foreground: 240 4% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 330 12% 22%;
+    --popover-foreground: 240 4% 12%;
 
     --primary: 345 45% 72%;
     --primary-foreground: 0 0% 100%;
@@ -22,7 +22,7 @@
     --secondary-foreground: 330 12% 25%;
 
     --muted: 350 20% 93%;
-    --muted-foreground: 330 10% 45%;
+    --muted-foreground: 240 3% 43%;
 
     --accent: 25 35% 78%;
     --accent-foreground: 0 0% 100%;
@@ -30,19 +30,19 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 345 25% 88%;
-    --input: 345 25% 88%;
+    --border: 240 6% 83%;
+    --input: 240 6% 83%;
     --ring: 345 45% 72%;
 
     --radius: 0.5rem;
 
     --rose-light: 350 40% 97%;
     --rose-medium: 345 45% 75%;
-    --gold: 345 30% 65%;
-    --gold-light: 345 35% 88%;
+    --gold: 345 30% 60%;
+    --gold-light: 345 30% 88%;
     --beige: 30 30% 94%;
     --cream: 40 35% 98%;
-    --section-alt: 350 40% 97%;
+    --section-alt: 240 5% 97%;
 
     --font-display: 'Cormorant Garamond', serif;
     --font-body: 'DM Sans', sans-serif;
@@ -111,7 +111,7 @@
   }
 
   .hero-overlay {
-    background: linear-gradient(to right, hsla(340, 20%, 10%, 0.65) 0%, hsla(340, 15%, 10%, 0.25) 60%, transparent 100%);
+    background: linear-gradient(to top, hsla(240,4%,8%,0.7) 0%, hsla(240,4%,8%,0.2) 50%, transparent 100%);
   }
 }
 
@@ -127,6 +127,6 @@
 }
 
 html {
-  font-size: 17px;
+  font-size: 18px;
   scroll-behavior: smooth;
 }

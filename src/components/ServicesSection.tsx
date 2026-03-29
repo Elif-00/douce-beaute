@@ -34,17 +34,19 @@ const services = [
 ];
 
 const ServicesSection = () => (
-  <section id="services" className="py-12 md:py-24 lg:py-32 bg-background">
+  <section id="services" className="py-24 md:py-40 bg-background">
     <div className="container mx-auto px-4 sm:px-6">
-      <Reveal className="text-center mb-12 md:mb-16">
-        <p className="font-body text-xs font-medium uppercase tracking-[0.3em] text-gold mb-3">Ce que nous offrons</p>
-        <h2 className="font-display text-5xl md:text-6xl font-semibold text-foreground">Nos Services</h2>
+      {/* Header Apple style — centré, large */}
+      <Reveal className="text-center mb-20 md:mb-28">
+        <p className="font-body text-xs uppercase tracking-[0.4em] text-gold mb-4">Ce que nous offrons</p>
+        <h2 className="font-display text-6xl md:text-7xl font-light text-foreground">Nos Services</h2>
       </Reveal>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8 max-w-5xl mx-auto">
+      {/* Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
         {services.map((s, i) => (
-          <Reveal key={s.name} delay={i * 0.08}>
-            <div className="group bg-cream hover:shadow-md transition-all duration-300 overflow-hidden h-full">
-              <div className="overflow-hidden h-52 sm:h-40 md:h-52">
+          <Reveal key={s.name} delay={Math.min(i * 0.07, 0.42)}>
+            <div className="group cursor-default overflow-hidden bg-section-alt">
+              <div className="overflow-hidden h-64 sm:h-56 md:h-64">
                 <img
                   src={s.img}
                   alt={s.name}
@@ -52,20 +54,21 @@ const ServicesSection = () => (
                   loading="lazy"
                 />
               </div>
-              <div className="p-5 sm:p-6 bg-cream">
-                <h3 className="font-display text-2xl sm:text-2xl md:text-3xl font-light text-foreground mb-2">{s.name}</h3>
-                <p className="font-body text-sm sm:text-base text-muted-foreground leading-relaxed">{s.desc}</p>
+              <div className="p-7 md:p-8">
+                <h3 className="font-display text-2xl md:text-3xl font-light text-foreground mb-2">{s.name}</h3>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
               </div>
             </div>
           </Reveal>
         ))}
       </div>
-      <Reveal className="text-center mt-10 md:mt-12">
+      {/* CTA */}
+      <Reveal className="text-center mt-16 md:mt-20">
         <a
           href="https://www.planity.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block gold-gradient text-white font-body text-sm uppercase tracking-widest px-10 py-4 rounded-full hover:opacity-90 transition-opacity"
+          className="inline-block gold-gradient text-white font-body text-sm uppercase tracking-widest px-12 py-5 rounded-full hover:opacity-90 transition-opacity"
         >
           Réserver en ligne
         </a>

@@ -29,25 +29,25 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => (
-  <section id="temoignages" className="py-12 md:py-24 lg:py-32 bg-section-alt">
+  <section id="temoignages" className="py-12 md:py-24 lg:py-32 bg-foreground">
     <div className="container mx-auto px-4 sm:px-6">
       <Reveal className="text-center mb-12 md:mb-16">
         <p className="font-body text-xs font-medium uppercase tracking-[0.3em] text-gold mb-3">Elles nous font confiance</p>
-        <h2 className="font-display text-5xl md:text-6xl font-semibold text-foreground">Témoignages</h2>
+        <h2 className="font-display text-5xl md:text-6xl font-light text-white">Témoignages</h2>
       </Reveal>
-      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-6 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-6xl mx-auto">
         {testimonials.map((t, i) => (
-          <Reveal key={i} delay={i * 0.1} className={i === 3 ? "hidden lg:block" : ""}>
-            <div className="bg-rose-light p-5 sm:p-7 border border-gold-light flex flex-col h-full">
+          <Reveal key={i} delay={i * 0.1}>
+            <div className="bg-white/5 p-8 md:p-10 flex flex-col h-full">
               <div className="flex items-center gap-3 mb-4">
                 <img
                   src={t.img}
                   alt={t.name}
-                  className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-gold-light shrink-0"
+                  className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-white/20 shrink-0"
                   loading="lazy"
                 />
                 <div>
-                  <p className="font-display text-base sm:text-lg font-semibold text-foreground">{t.name}</p>
+                  <p className="font-display text-xl font-light text-white">{t.name}</p>
                   <div className="flex gap-0.5 mt-1">
                     {Array.from({ length: t.stars }).map((_, j) => (
                       <Star key={j} size={13} className="fill-gold text-gold" />
@@ -55,7 +55,7 @@ const TestimonialsSection = () => (
                   </div>
                 </div>
               </div>
-              <p className="font-body text-sm sm:text-base text-muted-foreground leading-relaxed italic flex-1">
+              <p className="font-body text-base md:text-lg text-white/70 italic leading-relaxed flex-1">
                 "{t.text}"
               </p>
             </div>
